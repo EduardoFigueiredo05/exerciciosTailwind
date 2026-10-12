@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 01 — Button System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } };
+  </script>
+</head>
+<body class="flex min-h-screen items-center justify-center bg-white p-4 font-sans antialiased sm:p-8">
+  <main class="w-full max-w-[720px] min-h-[520px] rounded-[32px] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60 sm:p-8">
+    <!-- Header do exercício -->
+    <header class="border-b border-slate-200 pb-5">
+      <span class="inline-flex rounded-full bg-blue-50 px-2.5 py-1 text-xs font-bold tracking-wide text-blue-600">EXERCISE 01</span>
+      <h1 class="mt-5 text-[26px] font-extrabold tracking-tight text-slate-900">Button System</h1>
+      <p class="mt-2 text-sm text-slate-500">Variants + hover/focus/disabled states</p>
+    </header>
+
+    <!-- Painel de botões -->
+    <section class="mt-9 w-fit rounded-3xl bg-slate-100 p-6">
+      <div class="grid grid-cols-1 gap-x-3.5 gap-y-[18px] sm:grid-cols-3">
+        <!-- Primary -->
+        <button type="button"
+          class="inline-flex h-11 w-[130px] items-center justify-center rounded-xl bg-blue-600 px-5 text-[15px] font-semibold text-white transition
+                 hover:bg-blue-700 active:bg-blue-800
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100
+                 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500">
+          Primary
+        </button>
+
+        <!-- Secondary -->
+        <button type="button"
+          class="inline-flex h-11 w-[130px] items-center justify-center rounded-xl bg-slate-200 px-5 text-[15px] font-semibold text-slate-900 transition
+                 hover:bg-slate-300 active:bg-slate-400/60
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100
+                 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500">
+          Secondary
+        </button>
+
+        <!-- Danger -->
+        <button type="button"
+          class="inline-flex h-11 w-[130px] items-center justify-center rounded-xl bg-red-600 px-5 text-[15px] font-semibold text-white transition
+                 hover:bg-red-700 active:bg-red-800
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100
+                 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500">
+          Danger
+        </button>
+
+        <!-- Disabled (usa o mesmo estilo do Primary + atributo disabled) -->
+        <button type="button" disabled
+          class="inline-flex h-11 w-[130px] items-center justify-center rounded-xl bg-blue-600 px-5 text-[15px] font-semibold text-white transition
+                 hover:bg-blue-700
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
+                 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500">
+          Disabled
+        </button>
+      </div>
+
+      <p class="mt-6 text-sm text-slate-500">44px height · 12px radius · px 20 · semibold</p>
+    </section>
+  </main>
+</body>
+</html>
